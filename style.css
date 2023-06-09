@@ -1,0 +1,204 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+h2 {
+    margin: 0;
+}
+.container{
+    max-width: 1020px; 
+    margin: auto; 
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #BA55D3;
+    color: white;
+    max-width: 1020px; 
+    margin: auto; 
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.logo{
+    font-size: 3rem;
+    padding-right: 60px;
+}
+.sweet{
+    padding-left: 60px;
+    font-size: 35px;
+    font-weight: 600;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #483D8B;
+    color: white;
+    max-width: 1020px;
+    margin: auto; 
+    padding-top: 25px;
+    padding-bottom: 25px; 
+
+}
+.copyright{
+    padding-left: 60px;
+}
+.stylus{
+    padding-right: 60px;
+    font-size: 2rem;
+    
+}
+.wrapper {
+    min-height: 100vh;
+    background-color: #E6E6FA; 
+    padding: 30px;
+    margin: auto;
+    max-width: 1020px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-content: flex-start;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 20px;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px #4B0082;
+    position: relative;
+}
+.card .like {
+    position: absolute;
+    right: 8px;
+    bottom: 6px;
+    color: #4B0082;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.card .pic {
+    height: 200px;
+    width: 100%;
+    background-color: #DDA0DD;
+    background-image: url(https://zooblog.ru/wp-content/uploads/2022/04/picture-41.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.card__trash {
+	position: absolute;
+	left: 8px;
+	top: 230px;
+	cursor: pointer;
+	color: #483D8B;
+    font-size: 1.5rem;
+}
+.card__trash:hover {
+	color: #4B0082;
+}
+
+.btn-eye{
+    position: absolute;
+	right:  45px;
+    top: 230px;
+    cursor: pointer;
+	color: #4B0082;
+    font-size: 1.5rem;  
+}
+
+.pic.tmp {
+    /* background-image: url(images/default.png); 
+    background-size: contain; */
+    background-image: url(https://grizly.club/uploads/posts/2022-12/1670942740_grizly-club-p-sobaka-i-koshka-png-4.png);
+    background-size: auto 80%;
+}
+.btn {
+    outline: none;
+    border: none;
+    width: auto;
+    height: 30px;
+    border-radius: 8%;
+    background-color: #4B0082;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.btn:hover {
+    color: #DDA0DD;
+    transform: scale(1.1, 1.1);
+}
+
+.add {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+}
+.modal-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.modal-block {
+    background-color: rgba(62, 62, 62, 0.8);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal-block.active {
+    display: flex;
+}
+.modal {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    width: calc(100% - 100px);
+    max-width: 400px;
+    max-height: calc(100% - 100px);
+    overflow: auto;
+    position: relative;
+}
+form {
+	display: grid;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+form {
+	display: grid;
+	margin-top: 16px;
+	gap: 8px;
+}
+
+input {
+width: 100%;
+box-sizing: border-box;
+height: 30px;
+}
+.check{
+     position: relative;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+}
+.preview {
+        height: 200px;
+        background-color: #FCDCEB;
+        border-radius: 10px;
+        background-image: url(images/picture.png);
+        background-position: center;
+        background-size: cover;
+}

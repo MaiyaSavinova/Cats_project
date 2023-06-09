@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cats</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="add btn">
+        <i class="fa-solid fa-plus"></i>
+    </button>
+    <!--шапка-->
+    <header class="container">           
+        <div class="sweet">
+            My SweetCats
+        </div>
+        <div class="logo">
+             <i class="fa-solid fa-cat"></i>
+        </div>
+    </header>
+    
+    <div class="wrapper"></div>
+    <!--подвал-->
+    <footer class="container">
+        <div class="copyright">
+            <i class="fa-regular fa-copyright"></i>
+            Copyright: Maiya Savinova, 2023
+        </div> 
+        <div class="stylus">
+            <i class="fa-solid fa-feather"></i>
+        </div>
+    </footer>
+
+<div class="modal-block">
+    <div class="modal">
+        <button class="modal-close btn">
+		    <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h2>Добавить котика</h2>
+        <form id="add">
+           <div>
+                <label for="add_1">ID</label>
+				<input type="number" id="add_1" name="id" placeholder="ID кота" required min="1">
+			</div>
+            <div>
+                <label for="add_2">Имя</label>
+                <input type="text" id="add_2" name="name" autocomplete="on" required placeholder="Имя котика" > 
+			</div> 
+            <div>
+                <label for="add_3">Возраст</label>
+                <input type="number" id="add_3" name="age" placeholder="0" min="0" max="100">
+            </div>
+            <div>
+                <labek for="add_4">Рейтинг</labek>
+                <input type="number" id="add_4"name="rate" placeholder="Рейтинг" min="0" max="5">
+            </div>
+            <div>
+                <label for="desp">Описание</label>
+                <textarea id="desp" name="description" rows="3" cols="50" placeholder="Расскажите про своего питомца" ></textarea>
+            </div>
+            <div>
+                <label class="check" for="add_6">Любимчик</label>  
+                <input type="checkbox" id="add_6"name="favorite">    
+            </div>	
+            <div>
+                <label for="photo">Добавить изображение</label>
+                <input id="photo" type="text" name="image" placeholder="Фото">
+			</div>
+            <div class="preview" style></div>
+            <button class="btn" type="submit">Добавить</button>
+        </form>   
+    </div>   
+</div>
+<div class="modal-block">
+    <div class="modal">
+    <button class="modal-close btn">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+        <div class="modal-cat">
+            <form>
+                <h2>Посмотреть котика</h2>
+            </form>
+        </div>
+    </div>
+</div>
+        <script src="js/function.js"></script>
+		<script src="js/global.js"></script>
+		<script src="script.js"></script>
+
+
+</body>
+</html>
+		        
+
+	    
+   
+    
+
+    
+
+ 
+		
+    
+
+		
