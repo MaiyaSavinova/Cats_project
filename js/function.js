@@ -84,10 +84,7 @@ function cardDelete(id, el) {
 }
   //Просмотр котика.
  /* function ShowCard (id, el){
-    let x = Array.from(modals).find(x => x.dataset.type === el.dataset.action);
-    x.classList.add("active");
-    let content = x.querySelector(".modal-cat")
-    let cat = cats.find(cat => cat.id === id);
+    
     content.innerHTML = `
         <div class="cat-text">
             <h2>${cat.name}</h2>
@@ -115,17 +112,4 @@ function cardDelete(id, el) {
         })
     }*/
 
-    /*function cardShow(id, el) {
-      let m = Array.from(modals).find(m => m.dataset.type === el.dataset.action);
-      m.classList.add("active");
-      let content = m.querySelector(".modal-cat")
-      let cat = cats.find(cat => cat.id === id);
-      content.innerHTML = `
-          <div class="cat-text">
-              <h2>${cat.name}</h2>
-              <div>${typeof cat.age === "number" ? setAge(cat.age) : "Возраст не указан"}</div>
-              <div>${cat.description || "Информации о котике пока нет..."}</div>
-          </div>
-          <img src=${cat.image || "images/default.png"} alt="${cat.name}">
-      `
-  }*/
+
