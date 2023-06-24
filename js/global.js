@@ -3,8 +3,8 @@ const addBtn = document.querySelector(".add");
 const mdBox = document.querySelector(".modal-block");
 const mdClose = mdBox.querySelector(".modal-close");
 // const mdClose = mdBox.firstElementChild;
-/*const blockShow = document.querySelector(".btn-eye");
-const catModal = document.querySelector(".modal-block-cat"); */
+const blockShow = document.querySelector(".btn-eye");
+const catModal = document.querySelector(".modal-block-cat"); 
 
 const addForm = document.forms.add;
 const prevTag = addForm.querySelector(".preview");

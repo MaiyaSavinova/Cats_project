@@ -83,20 +83,8 @@ function cardDelete(id, el) {
   }
 }
   //Просмотр котика.
- /* function ShowCard (id, el){
-    
-    content.innerHTML = `
-        <div class="cat-text">
-            <h2>${cat.name}</h2>
-            <div>${typeof cat.age === "number" ? setAge(cat.age) : "Возраст не указан"}</div>
-            <div>${cat.description || "Информации о котике пока нет..."}</div>
-        </div>
-        <img src=${cat.image || "images/default.png"} alt="${cat.name}">
-    `
-}
-
-
-  /*function ShowCard (id, el){
+ 
+ function ShowCard (id, el){
   fetch(path + "/show")
         .then(function(res) {
             return res.json();
@@ -110,6 +98,6 @@ function cardDelete(id, el) {
                 }
             }
         })
-    }*/
+    }
 
 
