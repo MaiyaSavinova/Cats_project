@@ -26,10 +26,14 @@ mdBox.addEventListener("click", e => {
         mdBox.classList.remove("active");
     }
 });
-
-/*blockShow.addEventListener("click", e => {
-    catModal.classList.toggle("active");
-})*/
+mdClose2.addEventListener("click", e => {
+    mdBox2.classList.remove("active");
+});
+mdBox2.addEventListener("click", e => {
+    if (e.target === e.currentTarget) {
+        mdBox2.classList.remove("active");
+    }
+});
 
 addForm.elements.image.addEventListener("change", e => {
     prevTag.style.backgroundImage = `url(${e.currentTarget.value})`;

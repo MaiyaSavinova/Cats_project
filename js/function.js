@@ -24,7 +24,7 @@ function createCard(pet, tag) {
   cardShow.className = "fa-solid fa-eye btn-eye";
   cardShow.addEventListener("click", e => {
     e.stopPropagation();
-    ShowCard(id, card);
+    showCard(pet.id);
   });
 
   const cardTrash = document.createElement("i");
@@ -32,15 +32,10 @@ function createCard(pet, tag) {
 
   cardTrash.addEventListener("click", (e) => {
     e.stopPropagation();
-    cardDelete(card);
+    cardDelete(pet.id);
   });
 
   card.append(cardImg, cardTitle, cardTrash, cardLike, cardShow);
-  tag.append(card);
-
-  card.addEventListener("click", (e) => {
-    cardDelete(id, card);
-  });
   tag.append(card);
 
 }
@@ -84,19 +79,30 @@ function cardDelete(id, el) {
 }
   //Просмотр котика.
  
- function ShowCard (id, el){
-  fetch(path + "/show")
+ function showCard (id){
+  fetch(path + `/show/${id}`)
         .then(function(res) {
             return res.json();
         })
         .then(function(data) {
-            if (data.length) {
-                pets = data;
-                localStorage.setItem("maiya_sav", JSON.stringify(data));
-                for (let pet of data) {
-                  ShowCard(modal-cat);
-                }
-            }
+          mdBox2.classList.add("active");
+          catModal.innerHTML= 
+          `<h2> ${data.name}</h2>` +
+          `<p>ID: ${data.id}</p>` +
+          `<p>Возраст: ${data.age}</p>` +
+          `<p>Рейтинг: ${data.rate}</p>` +
+          `<p>Описание: ${data.description}</p>` +
+          `<img class="modal__cat" src=${data.image} height="200px">`;
+          console.log(data);
+          if(data.rate == undefined){
+            catModal.innerHTML=
+            `<h2> ${data.name}</h2>` +
+            `<p>ID: ${data.id}</p>` +
+            `<p>Возраст: ${data.age}</p>` +          
+            `<p>Рейтинг: Не указан.</p>` +
+            `<p>Описание: ${data.description}</p>` +
+            `<img class="modal__cat" src=${data.image} height="200px">`;
+          }          
         })
     }
 

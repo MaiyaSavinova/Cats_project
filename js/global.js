@@ -2,9 +2,11 @@ const block = document.querySelector(".wrapper");
 const addBtn = document.querySelector(".add");
 const mdBox = document.querySelector(".modal-block");
 const mdClose = mdBox.querySelector(".modal-close");
+const mdBox2 = document.querySelector(".modal-block-2");
+const mdClose2 = mdBox2.querySelector(".modal-close-2");
 // const mdClose = mdBox.firstElementChild;
 const blockShow = document.querySelector(".btn-eye");
-const catModal = document.querySelector(".modal-block-cat"); 
+const catModal = document.querySelector(".modal-cat"); 
 
 const addForm = document.forms.add;
 const prevTag = addForm.querySelector(".preview");
@@ -17,7 +19,7 @@ let path = `https://cats.petiteweb.dev/api/single/${name}`;
     JSON.parse(str) => преобразует строку в объект
 */
 
-let pets = localStorage.getItem("maiya_sav");
+let pets  //localStorage.getItem("maiya_sav");
 // let pets = localStorage.getItem("unic");
 if (pets) {
     try {
